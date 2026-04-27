@@ -1,6 +1,6 @@
 {
   "project": "zenve-test",
-  "description": "Just a test project",
+  "description": "Just a test project test",
   "default_branch": "main",
   "commit_message_prefix": "[zenve]",
   "run_timeout_seconds": 600,
