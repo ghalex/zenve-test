@@ -1,5 +1,5 @@
 {
-  "name": "Fronty",
+  "name": "React Developer",
   "adapter_type": "claude_code",
   "adapter_config": {
     "model": "claude-opus-4-6",
@@ -12,5 +12,6 @@
     "Bash"
   ],
   "heartbeat_interval_seconds": 0,
+  "github_label": "zenve:react-developer",
   "enabled": true
 }

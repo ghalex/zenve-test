@@ -1,0 +1,11 @@
+{
+  "project": "zenve-test",
+  "description": "Just a test",
+  "default_branch": "main",
+  "commit_message_prefix": "[zenve]",
+  "run_timeout_seconds": 600,
+  "pipeline": {
+    "zenve:fastapi-developer": null,
+    "zenve:react-developer": null
+  }
+}
