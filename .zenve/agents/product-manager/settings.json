@@ -1,4 +1,5 @@
 {
+  "slug": "product-manager",
   "name": "Product Manager",
   "adapter_type": "claude_code",
   "adapter_config": {

@@ -1,4 +1,5 @@
 {
+  "slug": "react-developer",
   "name": "React Developer",
   "adapter_type": "claude_code",
   "adapter_config": {
