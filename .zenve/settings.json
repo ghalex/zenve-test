@@ -1,6 +1,6 @@
 {
   "project": "zenve-test",
-  "description": "Just a test project test",
+  "description": "Create a simple and beautiful to-do list. Today tasks should be focus and cards should scroll horizontal.",
   "default_branch": "main",
   "commit_message_prefix": "[zenve]",
   "run_timeout_seconds": 600,
