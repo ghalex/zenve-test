@@ -107,9 +107,9 @@ export * from './api'
 
 ## 5. Design Style
 
-All visual rules are defined in `DESIGN.md`. Read it before building any UI and follow it strictly.
+All visual rules are defined in `{agent_dir}/DESIGN.md`. Read it before building any UI and follow it strictly.
 
 - Match the spacing, color, corner style, and component patterns defined there
 - Use `cn()` for all className merging
 - Prefer shadcn primitives over custom-built UI elements
-- When `DESIGN.md` is absent, use shadcn/ui defaults and standard Tailwind conventions
+- When `{agent_dir}/DESIGN.md` is absent, use shadcn/ui defaults and standard Tailwind conventions
