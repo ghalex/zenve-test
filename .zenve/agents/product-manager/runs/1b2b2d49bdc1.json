@@ -1,0 +1,22 @@
+{
+  "run_id": "1b2b2d49bdc1",
+  "agent": "product-manager",
+  "started_at": "2026-04-28T17:47:52Z",
+  "finished_at": "2026-04-28T17:51:26Z",
+  "duration_seconds": 214.66466828389093,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 1,
+    "title": "Setup new UI project in ui dir"
+  },
+  "output": {},
+  "pipeline_transition": null,
+  "token_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "error": ""
+}
