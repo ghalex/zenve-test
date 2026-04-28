@@ -6,6 +6,7 @@
   "run_timeout_seconds": 600,
   "pipeline": {
     "zenve:fastapi-developer": null,
-    "zenve:react-developer": null
+    "zenve:react-developer": null,
+    "zenve:product-manager": null
   }
 }
