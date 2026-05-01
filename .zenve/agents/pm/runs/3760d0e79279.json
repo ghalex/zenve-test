@@ -1,0 +1,25 @@
+{
+  "run_id": "3760d0e79279",
+  "agent": "pm",
+  "started_at": "2026-05-01T18:36:42Z",
+  "finished_at": "2026-05-01T18:38:07Z",
+  "duration_seconds": 85.79557593911886,
+  "status": "completed",
+  "exit_code": 0,
+  "item": {
+    "type": "issue",
+    "number": 7,
+    "title": "Base on top features create first PRD"
+  },
+  "output": {},
+  "pipeline_transition": {
+    "from_label": "zenve:pm",
+    "to_label": null
+  },
+  "token_usage": {
+    "input_tokens": 22171,
+    "output_tokens": 2654,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
