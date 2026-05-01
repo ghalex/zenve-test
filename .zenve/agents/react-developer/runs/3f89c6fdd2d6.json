@@ -1,0 +1,18 @@
+{
+  "run_id": "3f89c6fdd2d6",
+  "agent": "react-developer",
+  "started_at": "2026-05-01T09:36:07Z",
+  "finished_at": "2026-05-01T09:45:26Z",
+  "duration_seconds": 558.2117873658426,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 2,
+    "title": "Create a new frontend app in ui dir"
+  },
+  "output": {},
+  "pipeline_transition": null,
+  "token_usage": null,
+  "error": "Separator is found, but chunk is longer than limit"
+}
