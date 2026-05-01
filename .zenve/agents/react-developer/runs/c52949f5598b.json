@@ -1,0 +1,18 @@
+{
+  "run_id": "c52949f5598b",
+  "agent": "react-developer",
+  "started_at": "2026-05-01T09:27:45Z",
+  "finished_at": "2026-05-01T09:27:46Z",
+  "duration_seconds": 0.2770609939470887,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 2,
+    "title": "Create a new frontend app in ui dir"
+  },
+  "output": {},
+  "pipeline_transition": null,
+  "token_usage": null,
+  "error": "error: unknown option '--max-tokens'"
+}
