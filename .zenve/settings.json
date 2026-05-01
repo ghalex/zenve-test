@@ -1,0 +1,15 @@
+{
+  "project": "zenve-test",
+  "description": "A todo list, very simple each day gets a card and cards swap horizontal with today center.",
+  "default_branch": "main",
+  "commit_message_prefix": "[zenve]",
+  "run_timeout_seconds": 600,
+  "pipeline": {
+    "zenve:fastapi-developer": null,
+    "zenve:product-manager": null,
+    "zenve:react-developer": null,
+    "zenve:fastapi-dev": null,
+    "zenve:pm": null,
+    "zenve:react-dev": null
+  }
+}

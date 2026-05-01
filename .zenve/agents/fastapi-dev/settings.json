@@ -1,19 +1,23 @@
 {
-  "slug": "fastapi-developer",
+  "slug": "fastapi-dev",
   "name": "FastAPI Developer",
   "adapter_type": "claude_code",
   "adapter_config": {
     "model": "claude-opus-4-6",
     "max_tokens": 8096
   },
-  "skills": [],
+  "skills": [
+    "fastapi-setup",
+    "fastapi-monorepo-setup",
+    "fastapi-architect"
+  ],
   "tools": [
     "Read",
     "Write",
     "Bash"
   ],
   "heartbeat_interval_seconds": 0,
-  "github_label": "zenve:fastapi-developer",
+  "github_label": "zenve:fastapi-dev",
   "enabled": true,
-  "mode": "read_only"
+  "mode": "write"
 }
