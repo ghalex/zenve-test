@@ -1,3 +1,4 @@
 # Scratch
 
-_Cleared after run 6822b6221070._
+- Created `docs/product/daily-card-rail.md` from the existing top-features plan.
+- PRODUCT.md open questions now reflect only unresolved product decisions.
