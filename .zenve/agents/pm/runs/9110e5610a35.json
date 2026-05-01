@@ -1,0 +1,22 @@
+{
+  "run_id": "9110e5610a35",
+  "agent": "pm",
+  "started_at": "2026-05-01T18:35:29Z",
+  "finished_at": "2026-05-01T18:35:33Z",
+  "duration_seconds": 3.5694290259853005,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 7,
+    "title": "Base on top features create first PRD"
+  },
+  "output": {},
+  "pipeline_transition": null,
+  "token_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "error": "claude exited with code 1"
+}
