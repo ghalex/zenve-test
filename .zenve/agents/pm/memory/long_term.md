@@ -8,3 +8,9 @@
 - **Features planned (in order)**: (1) Daily Card Rail, (2) Todo CRUD, (3) Local Persistence, (4) Today Focus Indicator, (5) Drag-to-Reorder Todos
 - **Key decision**: All data is client-side localStorage only for MVP phase; no backend
 - **Open questions logged**: localStorage vs IndexedDB, completed todo visibility policy, max rail day range
+
+## Run 3760d0e79279 (2026-05-01)
+
+- **PRD created**: `docs/product/daily-card-rail.md` as the first developer-ready feature spec
+- **Product decision reflected in PRODUCT.md**: localStorage-only storage remains the MVP direction, so that question was removed from open questions
+- **Daily Card Rail scope clarified**: the PRD requires adjacent-day navigation without a user-facing hard stop, while longer-term performance policy remains open

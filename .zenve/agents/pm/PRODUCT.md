@@ -46,6 +46,5 @@ Zenve is a minimal daily todo app that gives each day its own card, arranged in 
 
 ## Open Questions
 
-- [ ] Is data stored only in localStorage, or do we plan IndexedDB for larger datasets?
 - [ ] Do completed todos auto-hide after end of day, or stay visible indefinitely?
-- [ ] What is the maximum number of past/future days visible in the rail?
+- [ ] Do we keep adjacent-day navigation uncapped in MVP, or define a fixed visible date range later for performance policy?
