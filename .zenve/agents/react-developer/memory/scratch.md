@@ -1,1 +1,1 @@
-`ui/` already existed at run start. Re-validated successfully with `pnpm lint` and `pnpm build`; no code changes required in this run.
+Created the initial `ui/` SPA scaffold with routing, typed Redux setup, Tailwind v4, and shadcn primitives. Verified with `pnpm lint` and `pnpm build`.

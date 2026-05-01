@@ -1,4 +1,4 @@
-- The frontend app now lives in `ui/` as a Vite React 19 + TypeScript SPA with Tailwind v4, Redux Toolkit, React Router, and shadcn primitives.
-- The initial product UI is a local-state weekly todo rail: seven day cards, horizontal centering on the selected day, and today seeded as the default active card.
-- shadcn CLI initially generated files under `ui/@/components/ui`; the repo now uses `tsconfig.json` and `tsconfig.app.json` `paths` entries so `@/` resolves to `src/` correctly.
+- The frontend app lives in `ui/` as a Vite React 19 + TypeScript SPA with Tailwind v4, Redux Toolkit, React Router, and shadcn primitives.
+- The current starter UI is a minimal industrial control-panel shell, not the todo rail yet; the first feature still to build is the horizontal daily card rail with today centered.
+- shadcn CLI initially generated files under `ui/@/components/ui`; the working fix was to keep `@/*` in `tsconfig.app.json` for imports and use `./src/...` aliases in `ui/components.json` for CLI output paths.
 - The current `ui/` scaffold validates successfully with both `pnpm lint` and `pnpm build`.
