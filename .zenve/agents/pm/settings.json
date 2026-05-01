@@ -1,5 +1,5 @@
 {
-  "slug": "product-manager",
+  "slug": "pm",
   "name": "Product Manager",
   "adapter_type": "claude_code",
   "adapter_config": {
@@ -15,7 +15,7 @@
     "WebFetch"
   ],
   "heartbeat_interval_seconds": 0,
-  "github_label": "zenve:product-manager",
+  "github_label": "zenve:pm",
   "enabled": true,
-  "mode": "read_only"
+  "mode": "write"
 }
