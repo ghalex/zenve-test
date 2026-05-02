@@ -1,4 +1,4 @@
-Implemented task 01 for the calendar booking page:
-- Added `booking` Redux/RTK Query domain and public page-context endpoint wiring.
-- Added `/:workspaceSlug/:eventSlug` route with a dedicated booking page and distinct loading, 404, and generic error states.
-- Verified `pnpm lint` and `pnpm build` in `ui/` after installing local dependencies.
+Completed issue #15 host page refactor:
+- Replaced the `/` placeholder home surface with a mock host events overview for `Skywalker`.
+- Added typed mock host-event data plus reusable host events components.
+- Verified `pnpm --dir ui exec tsc --noEmit` after installing frontend dependencies in this worktree.
