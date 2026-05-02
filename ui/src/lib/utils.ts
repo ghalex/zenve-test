@@ -1,6 +1,14 @@
 import { clsx, type ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
+function toDateKey(date: Date) {
+  const year = date.getFullYear()
+  const month = `${date.getMonth() + 1}`.padStart(2, '0')
+  const day = `${date.getDate()}`.padStart(2, '0')
+
+  return `${year}-${month}-${day}`
+}
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
@@ -32,4 +40,63 @@ export function getErrorStatus(error: unknown) {
   }
 
   return null
+}
+
+export function getBookingCalendarDates(startDate: string, endDate: string) {
+  const start = new Date(`${startDate}T00:00:00`)
+  const end = new Date(`${endDate}T00:00:00`)
+  const dates: string[] = []
+
+  while (start <= end) {
+    dates.push(toDateKey(start))
+    start.setDate(start.getDate() + 1)
+  }
+
+  return dates
+}
+
+export function getCalendarWeekdayOffset(date: string) {
+  return new Date(`${date}T00:00:00`).getDay()
+}
+
+export function formatCalendarMonth(date: string) {
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date(`${date}T00:00:00`))
+}
+
+export function formatCalendarDayNumber(date: string) {
+  return new Intl.DateTimeFormat('en-US', {
+    day: 'numeric',
+  }).format(new Date(`${date}T00:00:00`))
+}
+
+export function formatCalendarWeekday(date: string) {
+  return new Intl.DateTimeFormat('en-US', {
+    weekday: 'short',
+  }).format(new Date(`${date}T00:00:00`))
+}
+
+export function formatSelectedDate(date: string) {
+  return new Intl.DateTimeFormat('en-US', {
+    weekday: 'long',
+    month: 'short',
+    day: 'numeric',
+  }).format(new Date(`${date}T00:00:00`))
+}
+
+export function formatSlotTime(timestamp: string) {
+  return new Intl.DateTimeFormat('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+  }).format(new Date(timestamp))
+}
+
+export function formatSlotTimeRange(start: string, end: string) {
+  return `${formatSlotTime(start)} - ${formatSlotTime(end)}`
+}
+
+export function isValidEmail(email: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
