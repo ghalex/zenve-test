@@ -6,6 +6,12 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatDurationMinutes(minutes: number) {
+  if (minutes % 60 === 0) {
+    const hours = minutes / 60
+
+    return `${hours} ${hours === 1 ? 'hour' : 'hours'}`
+  }
+
   return `${minutes} min`
 }
 

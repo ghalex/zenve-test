@@ -3,3 +3,5 @@
 - Design baseline follows the agent dashboard style: `rounded-none`, dashed dividers, compact spacing, and monospace metadata.
 - Public booking flow now has a dedicated route at `/:workspaceSlug/:eventSlug` with a `booking` store domain and initial RTK Query integration for loading booking page context.
 - `ui/src/config.ts` now supports `VITE_API_BASE_URL`, and booking page context types live in `ui/src/types.ts`.
+- The `/` route now serves a mock host events overview using `ui/src/components/host-events/` and `ui/src/lib/mock-host-events.ts` with mocked host identity `Skywalker`.
+- Host events are currently frontend-only mock records typed in `ui/src/types.ts`; no RTK Query or backend contract exists yet for host event management.
