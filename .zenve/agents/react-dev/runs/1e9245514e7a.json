@@ -1,0 +1,25 @@
+{
+  "run_id": "1e9245514e7a",
+  "agent": "react-dev",
+  "started_at": "2026-05-02T22:34:32Z",
+  "finished_at": "2026-05-02T22:41:06Z",
+  "duration_seconds": 393.4966359580285,
+  "status": "completed",
+  "exit_code": 0,
+  "item": {
+    "type": "issue",
+    "number": 25,
+    "title": "Integrate Supabase"
+  },
+  "output": {},
+  "pipeline_transition": {
+    "from_label": "zenve:react-dev",
+    "to_label": null
+  },
+  "token_usage": {
+    "input_tokens": 83225,
+    "output_tokens": 12824,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
