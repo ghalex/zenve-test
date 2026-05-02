@@ -1,0 +1,13 @@
+{
+  "project": "zenve-test",
+  "description": "A scheduling tool that lets people easily book meetings without back-and-forth messaging. Users share a link to their availability, and others can pick a time slot that works for them. Similar to Calendly.",
+  "default_branch": "main",
+  "commit_message_prefix": "[zenve]",
+  "run_timeout_seconds": 600,
+  "pipeline": {
+    "zenve:fastapi-dev": null,
+    "zenve:pm": null,
+    "zenve:react-architect": null,
+    "zenve:react-dev": null
+  }
+}
