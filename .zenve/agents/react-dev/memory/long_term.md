@@ -7,3 +7,4 @@
 - Host events are currently frontend-only mock records typed in `ui/src/types.ts`; no RTK Query or backend contract exists yet for host event management.
 - Public booking now works against mock data for `skywalker/intro-call-30` via `ui/src/lib/mock-booking.ts`, including context, per-date slots, and mock booking creation with 409 handling for reused slots.
 - The `booking` Redux domain now stores selected date, selected slot, and guest form fields, while RTK Query exposes context, slots, and create-booking hooks used by `ui/src/pages/public-booking-page.tsx`.
+- Zenve's current frontend theme now follows the MailHog-inspired warm editorial direction in `.zenve/agents/react-dev/DESIGN.md`, with updated global tokens in `ui/src/main.css` and live host/booking surfaces rethemed away from the previous dark dashed dashboard look.

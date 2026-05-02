@@ -7,33 +7,21 @@ export default function HostEventsOverview() {
   const hasEvents = hostEvents.length > 0
 
   const renderHero = () => (
-    <section className="relative overflow-hidden border-b border-dashed border-border/60 bg-black px-4 py-6 sm:px-6">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage:
-            'linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)',
-          backgroundSize: '48px 48px',
-        }}
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)',
-        }}
-      />
-      <div className="absolute left-4 top-4 h-18 w-18 border border-white/20" />
-      <div className="absolute bottom-4 right-4 h-18 w-18 border border-white/20" />
-      <div className="relative space-y-4">
+    <section className="editorial-hero relative overflow-hidden px-4 py-10 sm:px-6 sm:py-14">
+      <div className="absolute inset-x-6 top-6 h-px bg-border/70" />
+      <div className="absolute bottom-6 right-6 h-24 w-24 rounded-full border border-primary/10 bg-background/40 blur-3xl" />
+      <div className="relative space-y-5">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="border border-emerald-500/40 px-2 py-1 font-mono text-[10px] uppercase tracking-widest text-emerald-400">
+          <span className="editorial-kicker">
             host
           </span>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-white/60">operator | {hostDisplayName}</span>
+          <span className="editorial-eyebrow">curated schedule hub | {hostDisplayName}</span>
         </div>
         <div className="max-w-3xl space-y-3">
-          <h1 className="text-2xl font-medium tracking-tight text-white sm:text-4xl">Your event inventory and public booking links.</h1>
-          <p className="max-w-2xl text-[13px] text-white/70">
+          <h1 className="font-editorial text-3xl leading-tight text-foreground sm:text-5xl">
+            Your event inventory and public booking links.
+          </h1>
+          <p className="max-w-2xl text-sm leading-6 text-muted-foreground sm:text-[15px]">
             Review every hosted event type in one place, confirm duration and calendar routing, and access the exact public URL guests should use.
           </p>
         </div>
@@ -42,12 +30,11 @@ export default function HostEventsOverview() {
   )
 
   const renderSummary = () => (
-    <section className="flex flex-wrap items-center gap-2 border-y border-dashed border-border/60 bg-muted/30 px-3 py-2 text-[12px] text-muted-foreground">
-      <span className="font-mono text-[10px] uppercase tracking-widest">events</span>
-      <span className="font-mono text-[10px] uppercase tracking-widest">|</span>
-      <span className="font-mono">{hostEvents.length} configured</span>
-      <span className="font-mono text-[10px] uppercase tracking-widest">|</span>
-      <span className="font-mono">mock dataset</span>
+    <section className="flex flex-wrap items-center gap-3 rounded-full border border-border/80 bg-card/80 px-4 py-2 text-sm text-muted-foreground shadow-sm">
+      <span className="editorial-eyebrow">events</span>
+      <span>{hostEvents.length} configured</span>
+      <span className="h-1 w-1 rounded-full bg-border" />
+      <span>mock dataset</span>
     </section>
   )
 
@@ -60,9 +47,9 @@ export default function HostEventsOverview() {
   )
 
   const renderEmptyState = () => (
-    <section className="border border-dashed border-border/60 bg-card/80 px-3 py-4">
-      <div className="border-l-[3px] border-muted pl-2">
-        <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">no events yet</p>
+    <section className="editorial-panel px-4 py-5">
+      <div className="editorial-callout">
+        <p className="editorial-eyebrow">no events yet</p>
         <p className="mt-2 text-[13px] text-foreground">Skywalker does not have any events in this mock dataset yet.</p>
       </div>
     </section>
