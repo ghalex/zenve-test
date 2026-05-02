@@ -1,86 +1,170 @@
 # Design System
 
-> Replace this file with your project's visual language. The agent will follow whatever is defined here.
+## Reference
+
+Zenve should visually track `https://mailhog.site`.
+
+The shared direction is warm editorial SaaS: cream surfaces, serif-led headlines, polished product mock panels, restrained accent color, and calm credibility.
+
+Do not copy MailHog branding or content. Reuse the feel.
 
 ## Aesthetic
 
-Industrial control panel / operator dashboard — utilitarian, high-density, no decorative elements.
-
-## Corners & Borders
-
-- All cards, panels, dialogs, and buttons use `rounded-none` — no border-radius on structural elements
-- Dividers use dashed borders: `border-dashed border-border/60`
-- Pipe `|` separators in meta/info strips
-
-## Typography
-
-- `font-mono` for metadata, slugs, timestamps, and status labels
-- `tracking-widest text-[10px] uppercase` on status badges
-- Body text: `text-[12px]`–`text-[13px]`
-
-## Spacing & Density
-
-- Compact padding: `px-3 py-1.5`, `py-2`
-- High information density — prefer small text over large whitespace
+- Warm, premium, product-led
+- Editorial rather than corporate
+- Calm and trustworthy rather than technical or playful
+- Refined dashboard surfaces instead of industrial control panels
 
 ## Color
 
-Semantic status colors only — no decorative fills:
-- Active / success → `emerald`
-- Paused / warning → `amber`
-- Error → `red`
-- Inactive / off → `muted`
+Base the UI on warm neutrals with a terracotta accent.
+
+- Page background: warm cream
+- Surface: soft off-white / ivory
+- Elevated sections: slightly darker cream
+- Primary text: warm near-black
+- Secondary text: muted brown-gray
+- Border: beige-gray hairline
+- Accent: terracotta / burnt orange
+- Accent soft: pale peach / sand tint
+- Danger: muted red
+- Success: muted green
+
+Guidance:
+
+- Use accent color for primary CTAs, selected states, links, and small emphasis moments.
+- Keep most of the interface neutral.
+- Avoid saturated blues, neon colors, and stark grayscale dashboards.
+
+## Typography
+
+- Large page and section headings: serif
+- Body, labels, navigation, and buttons: sans-serif
+- Metadata, times, durations, and compact system details: monospace sparingly
+- Eyebrows and section labels: small uppercase with loose tracking
+
+Tone:
+
+- Headings feel elegant and slightly compressed
+- Body copy stays plain, readable, and modern
+
+## Corners & Borders
+
+- Cards, panels, dialogs, inputs, and buttons use moderate rounding
+- Prefer `rounded-md` or `rounded-lg`
+- Borders are thin and soft, never dashed by default
+- Avoid `rounded-none` unless a specific local pattern requires it
+
+## Shadows and Depth
+
+- Use soft layered shadows for primary cards and hero product previews
+- Standard app cards can use subtle shadows or border-only treatment
+- Depth should feel polished, not heavy or glassy
+
+## Spacing & Density
+
+- Marketing sections: generous whitespace and strong vertical rhythm
+- Product screens: tighter spacing, but still breathable
+- Prefer clean alignment and typographic hierarchy over cramming controls together
+- Avoid ultra-dense operator-dashboard layouts
 
 ## Buttons
 
-- Size: `size="xs" className="rounded-none"` everywhere
-- Never mix `xs` and `sm` buttons in the same UI context
-- Toolbar rows: `bg-muted/30 rounded-none` with hairline dividers between actions
+- Primary buttons use the accent background with light text
+- Secondary buttons use neutral surface treatment with visible border
+- Button shapes remain lightly rounded, never square-cut and never oversized pills
+- Keep paired CTAs visually balanced, especially on hero and empty states
 
-## Status Indicators
+## Cards and Panels
 
-- Colored left-edge bars (`w-[3px]`) on cards
-- Monospace all-caps labels: `LIVE`, `HOLD`, `ERR`, `OFF`
-- Pulsing dot alongside live status labels
+Default panel pattern:
+
+- Warm surface background
+- Soft border
+- `rounded-lg`
+- Optional soft shadow
+- Distinct header area when the panel contains structured data
+
+Use this pattern for:
+
+- Booking summaries
+- Event cards
+- Availability sections
+- Confirmation panels
+- Product demo areas on landing surfaces
+
+## Selection and Active States
+
+- Selected rows or options use an accent-tinted background
+- Active items may also use an accent edge, accent text, or small status indicator
+- Active state must remain obvious without turning the whole screen into an accent block
+
+## Product Demo Pattern
+
+When a page needs a prominent visual container, mirror the reference site's polished mock-app treatment.
+
+- Rounded outer shell
+- Thin border
+- Soft shadow
+- Simple header bar
+- Structured inner content with list/detail or grid layout
+- Small badges for status, confirmation, or type
+
+This is especially appropriate for hero sections, booking previews, and confirmation summaries.
+
+## Content Section Pattern
+
+For landing and informational sections:
+
+- Small uppercase eyebrow
+- Serif heading
+- Short explanatory paragraph
+- Grid of feature or step cards beneath
+
+Cards use:
+
+- Simple icons
+- Compact titles
+- Muted explanatory text
+
+## Code / Config Block Pattern
+
+For developer-facing setup examples, use a dark inset code panel as a contrast moment.
+
+- Keep the rest of the page warm and light
+- Dark panels are allowed only as contained components, not as the full-page default
+- Rounded corners remain in place
+
+## Scheduling-Specific Adaptation
+
+Zenve is a scheduling product, so apply the reference style to scheduling use cases.
+
+- Guest booking pages must feel focused and welcoming
+- Time-slot pickers must be clear, tactile, and calm
+- Confirmation states should feel polished and reassuring
+- Host management pages can be denser, but must preserve the same warm visual language
 
 ## Animation
 
-- No animation libraries (no framer-motion)
-- CSS `animate-pulse` only for live status indicators
+- Keep motion subtle and fast
+- Use hover tint, border darkening, or slight lift
+- Avoid bouncy, theatrical, or decorative animation libraries unless already established in the app
 
-## Decorative Panel Pattern (Dark Hero / Auth / Onboarding)
+## Do Not Do
 
-For full-height decorative right-panels on split-layout pages:
+- No industrial control-panel styling
+- No hard square UI as the default
+- No primary dark-theme surfaces across whole pages
+- No bright blue SaaS defaults
+- No heavy gradients or glossy marketing gimmicks
+- No cluttered tables that ignore spacing and hierarchy
 
-**Background grid:**
-```tsx
-<div className="absolute inset-0" style={{
-  backgroundImage: `
-    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)
-  `,
-  backgroundSize: '48px 48px',
-}} />
-```
+## Quick Checks
 
-**Plus-corner SVG box** (file-local helper, never exported):
-```tsx
-const PlusCorner = ({ x, y }: { x: number; y: number }) => (
-  <g transform={`translate(${x - 6}, ${y - 6})`}>
-    <line x1="6" y1="2" x2="6" y2="10" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
-    <line x1="2" y1="6" x2="10" y2="6" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
-  </g>
-)
-```
+Before shipping a screen, verify:
 
-**Radial vignette:**
-```tsx
-<div className="absolute inset-0" style={{
-  background: 'radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)',
-}} />
-```
-
-**Rules:**
-- Always `bg-black` — never inherit theme background
-- Two decorative SVG boxes minimum: one top-left, one bottom-right
-- Keep `PlusCorner` as a file-local component, not exported
+- Does it read as warm and premium at a glance?
+- Are major headings serif-led where appropriate?
+- Are cards and controls softly rounded with gentle borders?
+- Is the accent color used intentionally rather than everywhere?
+- Does the screen feel like the same product as the rest of Zenve?
