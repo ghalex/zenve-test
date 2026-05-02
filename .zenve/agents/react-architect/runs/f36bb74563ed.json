@@ -1,0 +1,25 @@
+{
+  "run_id": "f36bb74563ed",
+  "agent": "react-architect",
+  "started_at": "2026-05-02T16:05:53Z",
+  "finished_at": "2026-05-02T16:07:50Z",
+  "duration_seconds": 116.25161459902301,
+  "status": "completed",
+  "exit_code": 0,
+  "item": {
+    "type": "issue",
+    "number": 12,
+    "title": "Create calendar page."
+  },
+  "output": {},
+  "pipeline_transition": {
+    "from_label": "zenve:react-architect",
+    "to_label": "zenve:react-dev"
+  },
+  "token_usage": {
+    "input_tokens": 31356,
+    "output_tokens": 4153,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
