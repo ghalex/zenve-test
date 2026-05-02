@@ -1,0 +1,22 @@
+{
+  "run_id": "5a0a0105bad2",
+  "agent": "react-architect",
+  "started_at": "2026-05-02T16:46:58Z",
+  "finished_at": "2026-05-02T16:47:58Z",
+  "duration_seconds": 59.39196846913546,
+  "status": "needs_input",
+  "exit_code": 0,
+  "item": {
+    "type": "issue",
+    "number": 17,
+    "title": "Event details"
+  },
+  "output": {},
+  "pipeline_transition": null,
+  "token_usage": {
+    "input_tokens": 28850,
+    "output_tokens": 1504,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
