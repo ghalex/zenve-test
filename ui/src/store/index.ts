@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { appReducer } from '@/store/app'
+import { authReducer } from '@/store/auth'
 import { bookingApi, bookingReducer } from '@/store/booking'
 
 export const store = configureStore({
   reducer: {
     app: appReducer,
+    auth: authReducer,
     booking: bookingReducer,
     [bookingApi.reducerPath]: bookingApi.reducer,
   },

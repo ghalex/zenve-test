@@ -100,3 +100,15 @@ export function formatSlotTimeRange(start: string, end: string) {
 export function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
+
+export function getErrorMessage(error: unknown, fallbackMessage = 'Something went wrong.') {
+  if (error instanceof Error && error.message) {
+    return error.message
+  }
+
+  if (typeof error === 'object' && error !== null && 'message' in error && typeof error.message === 'string') {
+    return error.message
+  }
+
+  return fallbackMessage
+}

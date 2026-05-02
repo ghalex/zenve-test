@@ -1,8 +1,13 @@
+import { Button } from '@/components/ui/button'
 import HostEventCard from '@/components/host-events/host-event-card'
 import { mockHostEventsPageContext } from '@/lib/mock-host-events'
+import { signOut, selectCurrentUser } from '@/store/auth'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
 
 export default function HostEventsOverview() {
-  const hostDisplayName = mockHostEventsPageContext.host.displayName
+  const dispatch = useAppDispatch()
+  const currentUser = useAppSelector(selectCurrentUser)
+  const hostDisplayName = currentUser?.email || mockHostEventsPageContext.host.displayName
   const hostEvents = mockHostEventsPageContext.events
   const hasEvents = hostEvents.length > 0
 
@@ -11,11 +16,20 @@ export default function HostEventsOverview() {
       <div className="absolute inset-x-6 top-6 h-px bg-border/70" />
       <div className="absolute bottom-6 right-6 h-24 w-24 rounded-full border border-primary/10 bg-background/40 blur-3xl" />
       <div className="relative space-y-5">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="editorial-kicker">
-            host
-          </span>
-          <span className="editorial-eyebrow">curated schedule hub | {hostDisplayName}</span>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="editorial-kicker">host</span>
+            <span className="editorial-eyebrow">curated schedule hub | {hostDisplayName}</span>
+          </div>
+          <Button
+            variant="outline"
+            className="rounded-lg bg-background/70"
+            onClick={() => {
+              void dispatch(signOut())
+            }}
+          >
+            Sign out
+          </Button>
         </div>
         <div className="max-w-3xl space-y-3">
           <h1 className="font-editorial text-3xl leading-tight text-foreground sm:text-5xl">
