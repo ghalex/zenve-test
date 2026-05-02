@@ -1,27 +1,25 @@
-# Product: {project_name}
+# Product: Zenve
 
 ## Vision
 
-<!-- One sentence: what is this product and why does it exist? -->
-_Not yet defined._
+Zenve lets people share a booking link tied to their availability so meetings can be scheduled without back-and-forth messaging.
 
 ## North Star Metric
 
-<!-- The single number that best captures whether the product is succeeding. -->
-_Not yet defined._
+Weekly completed bookings through Zenve scheduling links.
 
 ## Target Users
 
-<!-- Define the personas who use this product. -->
-
 | Persona | Description | Primary need |
 |---|---|---|
-| _TBD_ | _TBD_ | _TBD_ |
+| Host | A professional sharing a booking link so others can reserve time. | Publish availability and receive confirmed meetings with low setup effort. |
+| Guest | A person booking time with a host through a shared link. | Pick a valid time quickly and submit contact details without confusion. |
 
 ## Key Metrics / KPIs
 
-<!-- Measurable goals the team tracks. -->
-- _Not yet defined._
+- Booking completion rate from public booking page visit to confirmed meeting.
+- Median time for a guest to complete a booking.
+- Weekly active hosts with at least one published scheduling link.
 
 ## Implemented Features
 
@@ -30,17 +28,18 @@ _Not yet defined._
 
 ## Current Priorities
 
-<!-- MoSCoW-labelled backlog. Keep this list short and ordered. -->
-- _Not yet defined._
+- [MUST] Public booking page where a guest selects a date, chooses a time, enters contact information, and creates a meeting.
+- [SHOULD] Booking confirmation state that clearly confirms the reserved slot and submitted contact details.
+- [SHOULD] Host-facing flow to publish a shareable scheduling link backed by availability.
+- [COULD] Guest reschedule and cancellation flow from a confirmation link.
 
 ## Future / Deferred
 
 <!-- Ideas acknowledged but not committed. -->
-- _Nothing deferred yet._
+- Team scheduling, pooled availability, and round-robin assignment.
+- Payments and paid appointment types.
 
 ## Open Questions
 
-<!-- Unresolved product decisions. Remove when answered, add new ones as they arise. -->
-- [ ] _What is the core problem this product solves?_
-- [ ] _Who is the primary persona?_
-- [ ] _What does success look like at 3 months?_
+- [ ] What booking confirmation information must be shown immediately after a meeting is created?
+- [ ] What host-defined constraints on bookable windows, notice periods, and buffer times are required in the first release?
