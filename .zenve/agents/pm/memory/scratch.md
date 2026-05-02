@@ -1,3 +1,3 @@
 # Scratch
 
-- Run `e7685d7cb4aa`: created PRD `docs/product/calendar-booking-page.md` and established initial product context in `PRODUCT.md`.
+- Run `0cb22638a0e2`: created PRD `docs/product/host-events-page.md` and updated backlog context for the first host events overview page.
