@@ -2,3 +2,6 @@
 .zenve/events.log
 ui/node_modules/
 ui/dist/
+
+.env
+.env.local
