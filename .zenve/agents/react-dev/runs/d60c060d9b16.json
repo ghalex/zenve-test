@@ -1,0 +1,25 @@
+{
+  "run_id": "d60c060d9b16",
+  "agent": "react-dev",
+  "started_at": "2026-05-02T15:38:06Z",
+  "finished_at": "2026-05-02T15:44:42Z",
+  "duration_seconds": 396.22996145207435,
+  "status": "completed",
+  "exit_code": 0,
+  "item": {
+    "type": "issue",
+    "number": 10,
+    "title": "Create a new frontend app in ui dir"
+  },
+  "output": {},
+  "pipeline_transition": {
+    "from_label": "zenve:react-dev",
+    "to_label": null
+  },
+  "token_usage": {
+    "input_tokens": 87980,
+    "output_tokens": 13217,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
