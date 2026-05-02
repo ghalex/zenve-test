@@ -1,0 +1,3 @@
+- `ui/` now contains the React 19 + Vite + TypeScript frontend scaffold for Zenve.
+- The scaffold includes React Router, a minimal Redux Toolkit store, Tailwind CSS v4, and shadcn primitives under `ui/src/components/ui/`.
+- Design baseline follows the agent dashboard style: `rounded-none`, dashed dividers, compact spacing, and monospace metadata.
