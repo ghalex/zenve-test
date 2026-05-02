@@ -30,6 +30,7 @@ Weekly completed bookings through Zenve scheduling links.
 
 - [MUST] Public booking page where a guest selects a date, chooses a time, enters contact information, and creates a meeting.
 - [SHOULD] Booking confirmation state that clearly confirms the reserved slot and submitted contact details.
+- [SHOULD] Host events overview page that lists existing event types, connected calendars, and public booking links using mock data.
 - [SHOULD] Host-facing flow to publish a shareable scheduling link backed by availability.
 - [COULD] Guest reschedule and cancellation flow from a confirmation link.
 
@@ -43,3 +44,4 @@ Weekly completed bookings through Zenve scheduling links.
 
 - [ ] What booking confirmation information must be shown immediately after a meeting is created?
 - [ ] What host-defined constraints on bookable windows, notice periods, and buffer times are required in the first release?
+- [ ] What host action is required after viewing an event's public link: copy link, open public page, edit event, or create a new event?
