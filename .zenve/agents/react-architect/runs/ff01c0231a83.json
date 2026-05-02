@@ -1,0 +1,25 @@
+{
+  "run_id": "ff01c0231a83",
+  "agent": "react-architect",
+  "started_at": "2026-05-02T16:34:59Z",
+  "finished_at": "2026-05-02T16:36:26Z",
+  "duration_seconds": 86.438403790351,
+  "status": "completed",
+  "exit_code": 0,
+  "item": {
+    "type": "issue",
+    "number": 15,
+    "title": "Refactor host page"
+  },
+  "output": {},
+  "pipeline_transition": {
+    "from_label": "zenve:react-architect",
+    "to_label": "zenve:react-dev"
+  },
+  "token_usage": {
+    "input_tokens": 25560,
+    "output_tokens": 3145,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
