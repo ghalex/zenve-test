@@ -21,6 +21,10 @@ Weekly completed bookings through Zenve scheduling links.
 - Median time for a guest to complete a booking.
 - Weekly active hosts with at least one published scheduling link.
 
+## Product Decisions
+
+- Zenve's visual direction is a warm editorial SaaS aesthetic inspired by `https://mailhog.site`; see `docs/product/design-system.md` and `.zenve/agents/react-dev/DESIGN.md`.
+
 ## Implemented Features
 
 <!-- Append-only log of shipped features. Never delete entries. -->

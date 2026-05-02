@@ -1,3 +1,3 @@
 # Scratch
 
-- Run `39689dd384f2`: created PRD `docs/product/host-event-details.md` and updated backlog context for the first host event editing flow.
+- Run `347580530f25`: created `docs/product/design-system.md`, updated `react-dev/DESIGN.md`, and recorded the MailHog-inspired visual direction in PM product context.
