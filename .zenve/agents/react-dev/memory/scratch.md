@@ -1,4 +1,4 @@
-Completed issue #15 host page refactor:
-- Replaced the `/` placeholder home surface with a mock host events overview for `Skywalker`.
-- Added typed mock host-event data plus reusable host events components.
-- Verified `pnpm --dir ui exec tsc --noEmit` after installing frontend dependencies in this worktree.
+Completed issue #20 public booking page fix:
+- Added mock-backed booking context, slots, and booking submission for `/:workspaceSlug/:eventSlug`.
+- Replaced the placeholder booking flow shell with a selectable calendar, time slots, guest form, and confirmation state.
+- Verified `pnpm exec tsc --noEmit` and `pnpm build` in `ui/` after installing dependencies in this worktree.

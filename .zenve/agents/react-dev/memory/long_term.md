@@ -5,3 +5,5 @@
 - `ui/src/config.ts` now supports `VITE_API_BASE_URL`, and booking page context types live in `ui/src/types.ts`.
 - The `/` route now serves a mock host events overview using `ui/src/components/host-events/` and `ui/src/lib/mock-host-events.ts` with mocked host identity `Skywalker`.
 - Host events are currently frontend-only mock records typed in `ui/src/types.ts`; no RTK Query or backend contract exists yet for host event management.
+- Public booking now works against mock data for `skywalker/intro-call-30` via `ui/src/lib/mock-booking.ts`, including context, per-date slots, and mock booking creation with 409 handling for reused slots.
+- The `booking` Redux domain now stores selected date, selected slot, and guest form fields, while RTK Query exposes context, slots, and create-booking hooks used by `ui/src/pages/public-booking-page.tsx`.
