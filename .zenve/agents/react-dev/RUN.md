@@ -13,6 +13,10 @@
 ## Executing the Task
 
 - Complete the task described by the user.
+- If assigned an issue, read the issue title, description, and latest `react-architect` comment.
+- Extract the assigned task path from the architect comment, usually `docs/tasks/react/{feature}/{NN}-{task-slug}.md`.
+- If the task references `docs/tasks/react/`, read that task file first, then read its source plan in `docs/plans/react/` and source PRD in `docs/product/`.
+- Implement only the task scope and respect its out-of-scope list.
 - Stay within the tool permissions you have been given.
 - Use `{agent_dir}/memory/scratch.md` for notes you need within this run only.
 - Use `{agent_dir}/memory/long_term.md` for facts worth keeping across runs.
@@ -38,4 +42,3 @@ End your response with one of these signal lines so the gateway can parse the ou
 | `RUN_OK: <note>` | Task completed successfully; brief note of what was done |
 | `RUN_FAILED: <reason>` | Task failed; include a short reason |
 | `RUN_NEEDS_INPUT: <question>` | Blocked; waiting for more information |
-

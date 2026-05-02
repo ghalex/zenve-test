@@ -21,7 +21,44 @@ just docker-down  # stop container
 just docker-logs  # tail logs
 ```
 
-## 2. Project Structure
+## 2. Issue Intake
+
+FastAPI implementation tasks may be prepared by an architect/planner agent.
+
+Your normal input may be an issue that contains:
+
+- A title.
+- A description.
+- One or more comments, including an architect/planner comment.
+
+When assigned an issue:
+
+1. Read the issue title and description.
+2. Read the latest architect/planner comment, usually containing a `RUN_OK:` line.
+3. Extract the assigned task path from the architect/planner comment. Task paths are expected to look like `docs/tasks/fastapi/{feature}/{NN}-{task-slug}.md`.
+4. Read the assigned task file first.
+5. Read the referenced source plan in `docs/plans/fastapi/{feature}.md`.
+6. Read the referenced PRD in `docs/product/{feature}.md` for product context.
+7. Implement only the assigned task's `## Scope`.
+8. Treat the task's `## Out of Scope` as forbidden for this run.
+9. Verify every item in the task's `## Acceptance Criteria` and `## Verification`.
+
+When assigned a task path directly from `docs/tasks/fastapi/{feature}/{NN}-{task-slug}.md`:
+
+1. Read the assigned task file first.
+2. Read the referenced source plan in `docs/plans/fastapi/{feature}.md`.
+3. Read the referenced PRD in `docs/product/{feature}.md` for product context.
+4. Implement only the assigned task's `## Scope`.
+5. Treat the task's `## Out of Scope` as forbidden for this run.
+6. Verify every item in the task's `## Acceptance Criteria` and `## Verification`.
+
+If the architect/planner comment contains multiple task paths, implement only the task that matches the issue title most directly. If there is no clear match, return `RUN_NEEDS_INPUT`.
+
+If no task path is present in the architect/planner comment, look for a likely task in `docs/tasks/fastapi/` based on the issue title. If no likely task exists, return `RUN_NEEDS_INPUT`.
+
+If the issue description conflicts with the task, source plan, or PRD, follow the assigned task and note the conflict in the final response. If the task conflicts with the source plan or PRD, stop and return `RUN_NEEDS_INPUT` with the conflict. If the task requires frontend behavior, stop and return `RUN_NEEDS_INPUT` with the required frontend handoff.
+
+## 3. Project Structure
 
 Monorepo layout: `apps/api/` + `packages/`
 
@@ -48,7 +85,7 @@ apps/api                → all packages above
 3. Add to workspace root `pyproject.toml`: `[tool.uv.sources]` entry
 4. Run `uv sync`
 
-## 3. Routes
+## 4. Routes
 
 **Location:** `apps/api/src/api/routes/`
 
@@ -77,7 +114,7 @@ apps/api                → all packages above
 - Pydantic models defined inside `apps/api/`
 - Business logic (DB queries, conditionals) inside route handlers
 
-## 4. Services
+## 5. Services
 
 **Location:** `packages/services/src/{project_slug}_services/`
 
@@ -109,7 +146,7 @@ def get_membership_service(db: AsyncSession = Depends(get_db)) -> MembershipServ
 - Services bound to `app.state` (singletons like registries, WS managers) are fetched via `request: Request`
 - Routes always use `Depends(get_*_service)` — never call `SomeService(db)` directly in a handler
 
-## 5. Models
+## 6. Models
 
 ### Pydantic models (`packages/models/`)
 
@@ -131,7 +168,7 @@ def get_membership_service(db: AsyncSession = Depends(get_db)) -> MembershipServ
 5. Route → `apps/api/src/api/routes/{domain}.py` (thin wrapper)
 6. Register router → `apps/api/src/api/routes/__init__.py` + `main.py`
 
-## 6. Utils
+## 7. Utils
 
 **Location:** `packages/utils/src/{project_slug}_utils/`
 
