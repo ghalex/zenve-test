@@ -6,8 +6,8 @@
   "run_timeout_seconds": 600,
   "pipeline": {
     "zenve:fastapi-dev": null,
-    "zenve:pm": null,
-    "zenve:react-architect": null,
+    "zenve:pm": "zenve:react-architect",
+    "zenve:react-architect": "zenve:react-dev",
     "zenve:react-dev": null
   }
 }
