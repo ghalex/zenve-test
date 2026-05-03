@@ -70,3 +70,5 @@ export interface HostEventsPageContext {
   host: HostContext
   events: HostEvent[]
 }
+
+export type AuthMode = 'sign-in' | 'sign-up'
