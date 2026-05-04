@@ -11,3 +11,4 @@
 - `ui/` now includes a Supabase browser client wrapper in `src/lib/supabase.ts` plus a Redux `auth` domain for email/password sign-in, sign-up, sign-out, and session initialization.
 - Host routes are now guarded: `/auth` is public, `/` is private, and public booking routes remain open. The host overview currently uses mock event data even after authentication.
 - Frontend Supabase env support now expects `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`, with fallback support for `VITE_SUPABASE_ANON_KEY`.
+- `ui/src/pages/test.tsx` is now a lightweight public `/test` smoke-test route with a simple editorial card and button, intended for quick frontend verification.

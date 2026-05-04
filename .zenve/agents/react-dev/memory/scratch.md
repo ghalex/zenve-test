@@ -1,5 +1,4 @@
-Completed issue #25 Supabase auth integration:
-- Added `@supabase/supabase-js`, a typed `auth` Redux slice, and `src/lib/supabase.ts` for browser client setup.
-- Added `/auth` with a warm editorial sign-in/sign-up form adapted from the requested shadcn `login-03` block.
-- Guarded `/` behind `PrivateRoute`, kept public booking routes open, and added sign-out from the host overview.
-- Verified `pnpm build` in `ui/`; Vite reported a non-blocking large chunk warning.
+Latest run summary:
+- Fixed PR #27 review items in local changes: removed the stray `.zenve/settings.json` diff, renamed `HomePage` to `TestPage`, removed the unused import, and exposed the page at `/test`.
+- Updated PR #27 body via `gh api` because `gh pr edit` was blocked by missing token scopes.
+- Verified `pnpm lint` and `pnpm build` in `ui/`; build still shows the existing large chunk warning only.
