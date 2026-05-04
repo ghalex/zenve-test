@@ -1,0 +1,22 @@
+{
+  "run_id": "b2a0ff05e321",
+  "agent": "code-review",
+  "started_at": "2026-05-04T17:30:40Z",
+  "finished_at": "2026-05-04T17:32:02Z",
+  "duration_seconds": 81.61247020028532,
+  "status": "failed",
+  "exit_code": 0,
+  "item": {
+    "type": "pull_request",
+    "number": 27,
+    "title": "Add test page"
+  },
+  "output": {},
+  "pipeline_transition": null,
+  "token_usage": {
+    "input_tokens": 25661,
+    "output_tokens": 1711,
+    "cost_usd": 0.0
+  },
+  "error": "Adapter exited with code 0"
+}
