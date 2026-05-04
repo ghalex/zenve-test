@@ -1,0 +1,25 @@
+{
+  "run_id": "d2be7a526474",
+  "agent": "code-review",
+  "started_at": "2026-05-04T18:40:47Z",
+  "finished_at": "2026-05-04T18:41:37Z",
+  "duration_seconds": 49.51595262391493,
+  "status": "changes_requested",
+  "exit_code": 0,
+  "item": {
+    "type": "pull_request",
+    "number": 27,
+    "title": "Add test page"
+  },
+  "output": {},
+  "pipeline_transition": {
+    "from_label": "zenve:code-review",
+    "to_label": null
+  },
+  "token_usage": {
+    "input_tokens": 10,
+    "output_tokens": 1650,
+    "cost_usd": 0.17819775
+  },
+  "error": null
+}
