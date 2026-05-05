@@ -8,7 +8,7 @@
     "zenve:fastapi-dev": null,
     "zenve:pm": "zenve:react-architect",
     "zenve:react-architect": "zenve:react-dev",
-    "zenve:react-dev": null,
+    "zenve:react-dev": "zenve:code-review",
     "zenve:code-review": null
   }
 }
