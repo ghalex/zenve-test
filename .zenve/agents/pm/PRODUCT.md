@@ -34,6 +34,7 @@ Weekly completed bookings through Zenve scheduling links.
 
 - [MUST] Public booking page where a guest selects a date, chooses a time, enters contact information, and creates a meeting.
 - [MUST] Host availability rules per event so hosts control which times guests can book.
+- [SHOULD] Guest timezone selection on the public booking page so guests can view slots in their own timezone before booking.
 - [SHOULD] Booking confirmation state that clearly confirms the reserved slot and submitted contact details.
 - [SHOULD] Host events overview page that lists existing event types, connected calendars, and public booking links using mock data.
 - [SHOULD] Host event details flow where a host selects an event and edits its title, duration, and connected calendar.
