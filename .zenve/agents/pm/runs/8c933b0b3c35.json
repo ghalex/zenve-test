@@ -1,0 +1,18 @@
+{
+  "run_id": "8c933b0b3c35",
+  "agent": "pm",
+  "started_at": "2026-05-06T10:00:13Z",
+  "finished_at": "2026-05-06T10:00:13Z",
+  "duration_seconds": 0.0,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 29,
+    "title": "Think about a new feature we can add to our app"
+  },
+  "output": {},
+  "pipeline_transition": null,
+  "token_usage": null,
+  "error": "git fetch origin main failed: remote: Internal Server Error\nfatal: unable to access 'https://github.com/ghalex/zenve-test.git/': The requested URL returned error: 500"
+}
