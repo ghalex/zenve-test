@@ -1,0 +1,22 @@
+{
+  "run_id": "9eb3cf8cff9a",
+  "agent": "react-dev",
+  "started_at": "2026-05-06T12:16:45Z",
+  "finished_at": "2026-05-06T12:17:34Z",
+  "duration_seconds": 48.644829166994896,
+  "status": "needs_input",
+  "exit_code": 0,
+  "item": {
+    "type": "issue",
+    "number": 31,
+    "title": "Invent a new feature for our app"
+  },
+  "output": "Blocked by intake artifacts, not implementation.\n\n- The latest `react-architect` comment describes three possible guest-timezone tasks, but there are no actual task files at `docs/tasks/react/guest-timezone-selection/*.md`.\n- The referenced source plan file `docs/plans/react/guest-timezone-selection.md` is also missing.\n- Under this agent’s run rules, I need a concrete assigned task file to read first, and the generic issue title does not uniquely pick one of the three candidate tasks.\n\nRUN_NEEDS_INPUT: Please either create the missing `docs/tasks/react/guest-timezone-selection/...` and `docs/plans/react/guest-timezone-selection.md` files, or explicitly assign one task for this run, such as task 01 `booking-timezone-data-contract`.",
+  "pipeline_transition": null,
+  "token_usage": {
+    "input_tokens": 28395,
+    "output_tokens": 1268,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
