@@ -1,0 +1,27 @@
+{
+  "run_id": "7e8908b89fc7",
+  "agent": "react-dev",
+  "started_at": "2026-05-06T17:14:12Z",
+  "finished_at": "2026-05-06T17:19:04Z",
+  "duration_seconds": 292.7212980830227,
+  "status": "completed",
+  "exit_code": 0,
+  "item": {
+    "type": "issue",
+    "number": 31,
+    "title": "Invent a new feature for our app"
+  },
+  "output": "Implemented the guest-timezone data-layer task for the public booking flow.\n\nWhat changed:\n- Extended booking contracts in `ui/src/types.ts`:\n  - page context now includes `displayTimezone`\n  - slot responses now include `eventTimezone` and `displayTimezone`\n  - booking creation requests now require `displayTimezone`\n  - booking confirmations now return `eventTimezone` and `displayTimezone`\n- Updated Redux booking state in `ui/src/store/booking/slice.ts` to track `selectedDisplayTimezone`, plus selector/action exports in `ui/src/store/booking/index.ts`.\n- Updated RTK Query in `ui/src/store/booking/api.ts` so slot requests include `timezone` and booking creation carries the timezone-aware request shape.\n- Updated `ui/src/lib/mock-booking.ts` so mock slot responses are converted into the requested display timezone while preserving canonical event-timezone storage in booking confirmations.\n- Added minimal non-visual wiring in `ui/src/pages/public-booking-page.tsx` so the page initializes the selected display timezone from booking context and passes it into slot requests and booking creation.\n\nVerification:\n- `cd ui && pnpm lint` ✅\n- `cd ui && pnpm build` ✅\n\nNotes:\n- I treated `docs/tasks/react/guest-timezone-selection/01-booking-timezone-data-contract.md` as the assigned task because the issue comments identified the feature and task set, but not a later task path explicitly.\n- I also made the minimal build-unblock change in `ui/tsconfig.app.json` by adding `ignoreDeprecations: \"6.0\"`; without that, TypeScript 6 stopped the build before app code was checked.\n\nRUN_OK: Implemented guest-timezone-selection task 01 data-contract wiring and verified lint/build in `ui`",
+  "pipeline_transition": {
+    "from_label": "zenve:react-dev",
+    "to_label": [
+      "zenve:code-review"
+    ]
+  },
+  "token_usage": {
+    "input_tokens": 53411,
+    "output_tokens": 6350,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
