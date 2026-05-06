@@ -4,7 +4,7 @@
   "default_branch": "main",
   "commit_message_prefix": "[zenve]",
   "run_timeout_seconds": 600,
-  "run_schedule": "0 */15 * * *",
+  "run_schedule": "*/15 * * * *",
   "pipeline": {
     "zenve:fastapi-dev": null,
     "zenve:pm": "zenve:react-architect",
