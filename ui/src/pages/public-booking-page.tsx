@@ -28,11 +28,13 @@ import {
   selectGuestName,
   selectGuestNote,
   selectSelectedDate,
+  selectSelectedDisplayTimezone,
   selectSelectedSlotStart,
   setGuestEmail,
   setGuestName,
   setGuestNote,
   setSelectedDate,
+  setSelectedDisplayTimezone,
   setSelectedSlotStart,
   useCreateBookingMutation,
   useGetBookingPageContextQuery,
@@ -44,6 +46,7 @@ export default function PublicBookingPage() {
   const { workspaceSlug, eventSlug } = useParams<{ workspaceSlug: string; eventSlug: string }>()
   const dispatch = useAppDispatch()
   const selectedDate = useAppSelector(selectSelectedDate)
+  const selectedDisplayTimezone = useAppSelector(selectSelectedDisplayTimezone)
   const selectedSlotStart = useAppSelector(selectSelectedSlotStart)
   const guestName = useAppSelector(selectGuestName)
   const guestEmail = useAppSelector(selectGuestEmail)
@@ -51,7 +54,10 @@ export default function PublicBookingPage() {
   const routeParams = workspaceSlug && eventSlug ? { workspaceSlug, eventSlug } : null
   const queryArgs = routeParams ?? skipToken
   const { data, error, isError, isLoading, isFetching, refetch } = useGetBookingPageContextQuery(queryArgs)
-  const slotsQueryArgs = queryArgs !== skipToken && selectedDate ? { ...queryArgs, date: selectedDate } : skipToken
+  const slotsQueryArgs =
+    queryArgs !== skipToken && selectedDate && selectedDisplayTimezone
+      ? { ...queryArgs, date: selectedDate, timezone: selectedDisplayTimezone }
+      : skipToken
   const { data: slotsData, error: slotsError, isError: isSlotsError, isFetching: isSlotsFetching } = useGetBookingSlotsQuery(slotsQueryArgs)
   const [createBooking, { data: bookingConfirmation, error: createBookingError, isLoading: isCreatingBooking }] =
     useCreateBookingMutation()
@@ -117,6 +123,12 @@ export default function PublicBookingPage() {
   useEffect(() => {
     dispatch(resetBookingSelection())
   }, [dispatch, eventSlug, workspaceSlug])
+
+  useEffect(() => {
+    if (data?.displayTimezone && !selectedDisplayTimezone) {
+      dispatch(setSelectedDisplayTimezone(data.displayTimezone))
+    }
+  }, [data?.displayTimezone, dispatch, selectedDisplayTimezone])
 
   const renderHero = () => (
     <section className="editorial-hero relative overflow-hidden px-4 py-10 sm:px-6 sm:py-14">
@@ -401,21 +413,22 @@ export default function PublicBookingPage() {
              <div>
                <Button
                  type="button"
-                  size="xs"
-                 className="rounded-lg"
-                 disabled={!isFormReady || isCreatingBooking || !routeParams || !selectedSlot}
-                onClick={() => {
-                  if (!routeParams || !selectedSlot) {
-                    return
-                  }
+                   size="xs"
+                  className="rounded-lg"
+                  disabled={!isFormReady || isCreatingBooking || !routeParams || !selectedSlot || !selectedDisplayTimezone}
+                 onClick={() => {
+                   if (!routeParams || !selectedSlot || !selectedDisplayTimezone) {
+                     return
+                   }
 
-                  void createBooking({
-                    workspaceSlug: routeParams.workspaceSlug,
-                    eventSlug: routeParams.eventSlug,
-                    slotStart: selectedSlot.start,
-                    guest: {
-                      name: guestName.trim(),
-                      email: guestEmail.trim(),
+                   void createBooking({
+                     workspaceSlug: routeParams.workspaceSlug,
+                     eventSlug: routeParams.eventSlug,
+                     slotStart: selectedSlot.start,
+                     displayTimezone: selectedDisplayTimezone,
+                     guest: {
+                       name: guestName.trim(),
+                       email: guestEmail.trim(),
                     },
                     note: guestNote.trim() || undefined,
                   })
@@ -444,11 +457,11 @@ export default function PublicBookingPage() {
           <div className="space-y-3 px-4 py-4">
             <div className="editorial-callout border-l-2 border-l-primary">
               <p className="editorial-eyebrow">confirmation</p>
-              <p>
-                {formatSelectedDate(bookingConfirmation.booking.startsAt.slice(0, 10))} |{' '}
-                {formatSlotTimeRange(bookingConfirmation.booking.startsAt, bookingConfirmation.booking.endsAt)} |{' '}
-                {bookingConfirmation.booking.timezone}
-              </p>
+               <p>
+                 {formatSelectedDate(bookingConfirmation.booking.startsAt.slice(0, 10))} |{' '}
+                 {formatSlotTimeRange(bookingConfirmation.booking.startsAt, bookingConfirmation.booking.endsAt)} |{' '}
+                 {bookingConfirmation.booking.eventTimezone}
+               </p>
             </div>
             <div className="grid gap-3 md:grid-cols-2">
               <div className="editorial-metric">

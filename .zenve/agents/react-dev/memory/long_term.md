@@ -11,3 +11,6 @@
 - `ui/` now includes a Supabase browser client wrapper in `src/lib/supabase.ts` plus a Redux `auth` domain for email/password sign-in, sign-up, sign-out, and session initialization.
 - Host routes are now guarded: `/auth` is public, `/` is private, and public booking routes remain open. The host overview currently uses mock event data even after authentication.
 - Frontend Supabase env support now expects `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`, with fallback support for `VITE_SUPABASE_ANON_KEY`.
+- Guest timezone selection task 01 is implemented in `ui/`: booking context now includes `displayTimezone`, slot responses use `eventTimezone` plus `displayTimezone`, booking creation sends `displayTimezone`, and the booking Redux slice tracks `selectedDisplayTimezone`.
+- The mock public booking flow now converts slot timestamps into the requested display timezone while preserving canonical event-timezone booking storage in confirmation responses.
+- `ui/tsconfig.app.json` now sets `ignoreDeprecations: "6.0"` to keep TypeScript 6 builds passing with the current `baseUrl` alias setup.

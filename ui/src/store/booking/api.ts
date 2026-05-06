@@ -11,6 +11,7 @@ interface GetBookingPageContextArgs {
 
 interface GetBookingSlotsArgs extends GetBookingPageContextArgs {
   date: string
+  timezone: string
 }
 
 export const bookingApi = createApi({
@@ -36,13 +37,15 @@ export const bookingApi = createApi({
     }),
     getBookingSlots: builder.query<BookingSlotsResponse, GetBookingSlotsArgs>({
       async queryFn(args, _api, _extraOptions, fetchWithBQ) {
-        const mockSlots = findMockBookingSlots(args.workspaceSlug, args.eventSlug, args.date)
+        const mockSlots = findMockBookingSlots(args.workspaceSlug, args.eventSlug, args.date, args.timezone)
 
         if (mockSlots) {
           return { data: mockSlots }
         }
 
-        const result = await fetchWithBQ(`/public/booking-links/${args.workspaceSlug}/${args.eventSlug}/slots?date=${args.date}`)
+        const result = await fetchWithBQ(
+          `/public/booking-links/${args.workspaceSlug}/${args.eventSlug}/slots?date=${args.date}&timezone=${encodeURIComponent(args.timezone)}`,
+        )
 
         if (result.error) {
           return { error: result.error as FetchBaseQueryError }

@@ -1,5 +1,4 @@
-Completed issue #25 Supabase auth integration:
-- Added `@supabase/supabase-js`, a typed `auth` Redux slice, and `src/lib/supabase.ts` for browser client setup.
-- Added `/auth` with a warm editorial sign-in/sign-up form adapted from the requested shadcn `login-03` block.
-- Guarded `/` behind `PrivateRoute`, kept public booking routes open, and added sign-out from the host overview.
-- Verified `pnpm build` in `ui/`; Vite reported a non-blocking large chunk warning.
+Completed issue #31 guest-timezone-selection task `01-booking-timezone-data-contract`:
+- Updated booking types, RTK Query args, Redux booking state, and mock booking contracts for `displayTimezone` plus `eventTimezone`.
+- Added minimal public booking page wiring to initialize and pass the selected display timezone without changing visible UI scope.
+- Verified `pnpm lint` and `pnpm build` in `ui/`; build still reports the existing non-blocking chunk-size warning.

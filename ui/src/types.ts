@@ -10,6 +10,7 @@ export interface BookingPageContextResponse {
     timezone: string
     description: string
   }
+  displayTimezone: string
   bookingWindow: {
     startDate: string
     endDate: string
@@ -23,7 +24,8 @@ export interface BookingSlot {
 
 export interface BookingSlotsResponse {
   date: string
-  timezone: string
+  eventTimezone: string
+  displayTimezone: string
   slots: BookingSlot[]
 }
 
@@ -31,6 +33,7 @@ export interface CreateBookingRequest {
   workspaceSlug: string
   eventSlug: string
   slotStart: string
+  displayTimezone: string
   guest: {
     name: string
     email: string
@@ -45,7 +48,8 @@ export interface CreateBookingResponse {
     eventSlug: string
     startsAt: string
     endsAt: string
-    timezone: string
+    eventTimezone: string
+    displayTimezone: string
     guest: {
       name: string
       email: string

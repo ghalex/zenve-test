@@ -10,6 +10,56 @@ interface MockBookingFixture {
   slotsByDate: Record<string, BookingSlotsResponse['slots']>
 }
 
+function getFormattedDatePart(date: Date, timeZone: string, part: Intl.DateTimeFormatPartTypes) {
+  return (
+    new Intl.DateTimeFormat('en-CA', {
+      timeZone,
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hourCycle: 'h23',
+    })
+      .formatToParts(date)
+      .find((item) => item.type === part)?.value ?? ''
+  )
+}
+
+function getTimeZoneOffset(date: Date, timeZone: string) {
+  const offsetValue =
+    new Intl.DateTimeFormat('en-US', {
+      timeZone,
+      timeZoneName: 'longOffset',
+      hour: '2-digit',
+    })
+      .formatToParts(date)
+      .find((item) => item.type === 'timeZoneName')?.value ?? 'GMT+00:00'
+
+  return offsetValue === 'GMT' ? '+00:00' : offsetValue.replace('GMT', '')
+}
+
+function formatIsoInTimeZone(value: string, timeZone: string) {
+  const date = new Date(value)
+  const year = getFormattedDatePart(date, timeZone, 'year')
+  const month = getFormattedDatePart(date, timeZone, 'month')
+  const day = getFormattedDatePart(date, timeZone, 'day')
+  const hour = getFormattedDatePart(date, timeZone, 'hour')
+  const minute = getFormattedDatePart(date, timeZone, 'minute')
+  const second = getFormattedDatePart(date, timeZone, 'second')
+  const offset = getTimeZoneOffset(date, timeZone)
+
+  return `${year}-${month}-${day}T${hour}:${minute}:${second}${offset}`
+}
+
+function mapSlotToDisplayTimezone(slot: BookingSlotsResponse['slots'][number], timeZone: string) {
+  return {
+    start: formatIsoInTimeZone(slot.start, timeZone),
+    end: formatIsoInTimeZone(slot.end, timeZone),
+  }
+}
+
 const mockBookingFixtures: Record<string, MockBookingFixture> = {
   'skywalker/intro-call-30': {
     context: {
@@ -24,6 +74,7 @@ const mockBookingFixtures: Record<string, MockBookingFixture> = {
         timezone: 'America/New_York',
         description: 'A short introductory meeting to discuss goals, timing, and next steps.',
       },
+      displayTimezone: 'Europe/London',
       bookingWindow: {
         startDate: '2026-05-01',
         endDate: '2026-05-31',
@@ -70,7 +121,7 @@ export function findMockBookingContext(workspaceSlug: string, eventSlug: string)
   return mockBookingFixtures[getFixtureKey(workspaceSlug, eventSlug)]?.context
 }
 
-export function findMockBookingSlots(workspaceSlug: string, eventSlug: string, date: string) {
+export function findMockBookingSlots(workspaceSlug: string, eventSlug: string, date: string, displayTimezone: string) {
   const fixture = mockBookingFixtures[getFixtureKey(workspaceSlug, eventSlug)]
 
   if (!fixture) {
@@ -79,8 +130,11 @@ export function findMockBookingSlots(workspaceSlug: string, eventSlug: string, d
 
   return {
     date,
-    timezone: fixture.context.event.timezone,
-    slots: (fixture.slotsByDate[date] ?? []).filter((slot) => !bookedSlotStarts.has(slot.start)),
+    eventTimezone: fixture.context.event.timezone,
+    displayTimezone,
+    slots: (fixture.slotsByDate[date] ?? [])
+      .filter((slot) => !bookedSlotStarts.has(slot.start))
+      .map((slot) => mapSlotToDisplayTimezone(slot, displayTimezone)),
   }
 }
 
@@ -105,7 +159,7 @@ export function createMockBooking(request: CreateBookingRequest): CreateBookingR
 
   const slot = Object.values(fixture.slotsByDate)
     .flat()
-    .find((item) => item.start === request.slotStart)
+    .find((item) => mapSlotToDisplayTimezone(item, request.displayTimezone).start === request.slotStart)
 
   if (!slot || bookedSlotStarts.has(slot.start)) {
     return null
@@ -120,7 +174,8 @@ export function createMockBooking(request: CreateBookingRequest): CreateBookingR
       eventSlug: request.eventSlug,
       startsAt: slot.start,
       endsAt: slot.end,
-      timezone: fixture.context.event.timezone,
+      eventTimezone: fixture.context.event.timezone,
+      displayTimezone: request.displayTimezone,
       guest: request.guest,
       note: request.note,
     },
