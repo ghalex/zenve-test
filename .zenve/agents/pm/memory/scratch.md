@@ -1,3 +1,3 @@
 # Scratch
 
-- Run `347580530f25`: created `docs/product/design-system.md`, updated `react-dev/DESIGN.md`, and recorded the MailHog-inspired visual direction in PM product context.
+- Run `76806f668c44`: recommended host availability rules as a new feature, created `docs/product/host-availability-rules.md`, and updated `PRODUCT.md` priorities and open questions.

@@ -33,6 +33,7 @@ Weekly completed bookings through Zenve scheduling links.
 ## Current Priorities
 
 - [MUST] Public booking page where a guest selects a date, chooses a time, enters contact information, and creates a meeting.
+- [MUST] Host availability rules per event so hosts control which times guests can book.
 - [SHOULD] Booking confirmation state that clearly confirms the reserved slot and submitted contact details.
 - [SHOULD] Host events overview page that lists existing event types, connected calendars, and public booking links using mock data.
 - [SHOULD] Host event details flow where a host selects an event and edits its title, duration, and connected calendar.
@@ -48,4 +49,4 @@ Weekly completed bookings through Zenve scheduling links.
 ## Open Questions
 
 - [ ] What booking confirmation information must be shown immediately after a meeting is created?
-- [ ] What host-defined constraints on bookable windows, notice periods, and buffer times are required in the first release?
+- [ ] Should hosts manage one default availability template for all event types, or configure availability separately for each event in the first release?
