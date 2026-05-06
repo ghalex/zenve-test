@@ -1,3 +1,3 @@
 # Scratch
 
-- Run `76806f668c44`: recommended host availability rules as a new feature, created `docs/product/host-availability-rules.md`, and updated `PRODUCT.md` priorities and open questions.
+- Run `33362075eac4`: created `docs/product/guest-timezone-selection.md` for guest-selectable booking timezone support and added it to `PRODUCT.md` as a `[SHOULD]` priority.

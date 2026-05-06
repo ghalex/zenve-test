@@ -8,3 +8,4 @@
 - Issue `#22` established the product visual direction: a MailHog-inspired warm editorial SaaS design system documented for `react-dev`.
 - Issue `#29` introduced `docs/product/host-availability-rules.md` as a new core feature recommendation for per-event weekly availability plus booking constraints.
 - The first-release availability scope is per-event only and includes weekly hours, minimum notice, booking window days, and before/after buffers.
+- Issue `#31` introduced `docs/product/guest-timezone-selection.md` to let guests view and book public slots in their own timezone, with the selected display timezone preserved through confirmation.
