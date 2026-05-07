@@ -1,12 +1,14 @@
 {
   "slug": "pm",
   "name": "Product Manager",
-  "adapter_type": "open_code",
+  "adapter_type": "claude_code",
   "adapter_config": {
-    "model": "openai/gpt-5.4",
+    "model": "claude-opus-4-6",
     "max_tokens": 8096
   },
-  "skills": [],
+  "skills": [
+    "zenve-memory"
+  ],
   "tools": [
     "Read",
     "Write",

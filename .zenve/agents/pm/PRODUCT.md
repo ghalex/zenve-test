@@ -1,45 +1,46 @@
-# Product: Zenve Test
+# Product: {project_name}
 
 ## Vision
 
-Zenve helps people book meetings without back-and-forth messaging by letting hosts share availability links that guests can book directly.
+<!-- One sentence: what is this product and why does it exist? -->
+_Not yet defined._
 
 ## North Star Metric
 
-Weekly completed bookings.
+<!-- The single number that best captures whether the product is succeeding. -->
+_Not yet defined._
 
 ## Target Users
 
+<!-- Define the personas who use this product. -->
+
 | Persona | Description | Primary need |
 |---|---|---|
-| Host | Person who shares a scheduling link so others can book time with them. | Publish accurate availability and manage booking details confidently. |
-| Guest | Person who books time using a host's shared scheduling link. | Pick a suitable time quickly with minimal friction. |
+| _TBD_ | _TBD_ | _TBD_ |
 
 ## Key Metrics / KPIs
 
-- Increase weekly completed bookings.
-- Increase the share of hosts who complete core scheduling setup.
-- Reduce booking flow abandonment before time selection is completed.
+<!-- Measurable goals the team tracks. -->
+- _Not yet defined._
 
 ## Implemented Features
 
+<!-- Append-only log of shipped features. Never delete entries. -->
 - _Nothing shipped yet._
 
 ## Current Priorities
 
-- [MUST] Guest booking page that lets a guest select a valid time slot and complete a booking.
-- [MUST] Host availability rules so hosts can define when they can be booked.
-- [MUST] Host event details so hosts can define the meeting information guests see before booking.
-- [SHOULD] Host settings page for editing name and avatar in a dedicated authenticated profile area. See `docs/product/settings-page.md`.
-- [SHOULD] Host events page that lists shareable event links in one place.
+<!-- MoSCoW-labelled backlog. Keep this list short and ordered. -->
+- _Not yet defined._
 
 ## Future / Deferred
 
-- Notification preferences.
-- Billing and subscription settings.
-- Team and workspace settings.
-- Connected integrations management beyond event display.
+<!-- Ideas acknowledged but not committed. -->
+- _Nothing deferred yet._
 
 ## Open Questions
 
-- [ ] What does success look like at 3 months in numeric terms for weekly completed bookings and host setup completion?
+<!-- Unresolved product decisions. Remove when answered, add new ones as they arise. -->
+- [ ] _What is the core problem this product solves?_
+- [ ] _Who is the primary persona?_
+- [ ] _What does success look like at 3 months?_

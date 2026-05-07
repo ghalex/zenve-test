@@ -3,12 +3,13 @@
   "name": "Architect Agent",
   "adapter_type": "claude_code",
   "adapter_config": {
-    "model": "claude-sonnet-4-6",
+    "model": "claude-opus-4-6",
     "max_tokens": 8096,
-    "max_turns": 30,
-    "mode": "plan"
+    "turns": 30
   },
-  "skills": [],
+  "skills": [
+    "zenve-memory"
+  ],
   "tools": [
     "Read",
     "Write",
@@ -17,5 +18,5 @@
   "heartbeat_interval_seconds": 0,
   "github_label": "zenve:architect",
   "enabled": true,
-  "mode": "no_pr"
+  "mode": "artifact_pr"
 }
