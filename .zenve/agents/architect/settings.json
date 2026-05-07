@@ -12,6 +12,7 @@
   ],
   "tools": [
     "Read",
+    "Edit",
     "Write",
     "Bash"
   ],
