@@ -7,7 +7,7 @@
         "RUN.md": "sha256:60083563513b133c41512a920a835d5f3b1ca0b9ebdd9396c3fb0a387caba776",
         "SOUL.md": "sha256:dc57d70085e77572e07ec1bfd93e8013ba28e15f1d30dda97767b840dfe8ee91"
       },
-      "installedAt": "2026-05-07T20:18:01Z",
+      "installedAt": "2026-05-07T20:24:09Z",
       "source": "zenve-ai/zenve-registry",
       "sourceCommitSha": "1344444333d50e88c1b95857572cb55fd3cb1140",
       "template": "architect"
