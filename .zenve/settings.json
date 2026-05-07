@@ -5,10 +5,10 @@
   "commit_message_prefix": "[zenve]",
   "run_timeout_seconds": 600,
   "pipeline": {
-    "zenve:architect": null,
+    "zenve:architect": "zenve:frontend-dev",
     "zenve:code-review": null,
-    "zenve:frontend-dev": null,
-    "zenve:pm": null
+    "zenve:frontend-dev": "zenve:code-review",
+    "zenve:pm": "zenve:architect"
   },
   "stack": [
     "react",
