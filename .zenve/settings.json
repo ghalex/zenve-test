@@ -4,7 +4,7 @@
   "default_branch": "main",
   "commit_message_prefix": "[zenve]",
   "run_timeout_seconds": 600,
-  "run_schedule": "*/15 0 * * *",
+  "run_schedule": "*/15 * * * *",
   "pipeline": {
     "zenve:architect": "zenve:frontend-dev",
     "zenve:code-review": null,
