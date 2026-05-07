@@ -1,0 +1,22 @@
+{
+  "run_id": "5285cabbb469",
+  "agent": "architect",
+  "started_at": "2026-05-07T15:15:04Z",
+  "finished_at": "2026-05-07T15:22:24Z",
+  "duration_seconds": 440.3878609579988,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 36,
+    "title": "Create settings page"
+  },
+  "output": null,
+  "pipeline_transition": null,
+  "token_usage": {
+    "input_tokens": 2303,
+    "output_tokens": 5945,
+    "cost_usd": 2.032101
+  },
+  "error": "claude exited with code 1"
+}
