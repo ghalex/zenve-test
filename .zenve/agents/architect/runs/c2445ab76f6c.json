@@ -1,0 +1,22 @@
+{
+  "run_id": "c2445ab76f6c",
+  "agent": "architect",
+  "started_at": "2026-05-07T15:40:19Z",
+  "finished_at": "2026-05-07T15:41:50Z",
+  "duration_seconds": 91.01187883300008,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 36,
+    "title": "Create settings page"
+  },
+  "output": null,
+  "pipeline_transition": null,
+  "token_usage": {
+    "input_tokens": 13,
+    "output_tokens": 1163,
+    "cost_usd": 0.49363340000000006
+  },
+  "error": "claude exited with code 1"
+}
