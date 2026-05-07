@@ -1,0 +1,18 @@
+{
+  "run_id": "68311f0a8b39",
+  "agent": "code-review",
+  "started_at": "2026-05-07T18:45:05Z",
+  "finished_at": "2026-05-07T18:45:05Z",
+  "duration_seconds": 0.0,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 36,
+    "title": "Create settings page"
+  },
+  "output": null,
+  "pipeline_transition": null,
+  "token_usage": null,
+  "error": "git worktree add --detach worktrees/code-review-68311f origin/ failed: fatal: invalid reference: origin/"
+}
