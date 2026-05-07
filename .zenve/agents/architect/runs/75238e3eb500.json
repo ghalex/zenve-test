@@ -1,9 +1,9 @@
 {
   "run_id": "75238e3eb500",
   "agent": "architect",
-  "started_at": "2026-05-07T20:45:03Z",
-  "finished_at": "2026-05-07T20:45:53Z",
-  "duration_seconds": 49.92190050001955,
+  "started_at": "2026-05-07T20:46:27Z",
+  "finished_at": "2026-05-07T20:46:27Z",
+  "duration_seconds": 0.0,
   "status": "failed",
   "exit_code": 1,
   "item": {
@@ -13,10 +13,6 @@
   },
   "output": null,
   "pipeline_transition": null,
-  "token_usage": {
-    "input_tokens": 47,
-    "output_tokens": 2024,
-    "cost_usd": 0.3758425000000001
-  },
-  "error": "claude result error: subtype=error_max_turns | details: {\"subtype\": \"error_max_turns\", \"is_error\": true, \"result\": null}"
+  "token_usage": null,
+  "error": "git worktree add -b zenve/architect/39-75238e worktrees/architect-75238e origin/main failed: Preparing worktree (new branch 'zenve/architect/39-75238e')\nfatal: a branch named 'zenve/architect/39-75238e' already exists"
 }
