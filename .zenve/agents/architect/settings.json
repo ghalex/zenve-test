@@ -1,19 +1,19 @@
 {
-  "slug": "code-review",
-  "name": "Code Reviewer",
+  "slug": "architect",
+  "name": "Architect Agent",
   "adapter_type": "claude_code",
   "adapter_config": {
     "model": "claude-opus-4-6",
-    "max_tokens": 8096
+    "max_tokens": 8096,
+    "mode": "plan"
   },
   "skills": [],
   "tools": [
     "Read",
-    "Bash",
-    "Grep"
+    "Bash"
   ],
   "heartbeat_interval_seconds": 0,
-  "github_label": "zenve:code-review",
+  "github_label": "zenve:architect",
   "enabled": true,
-  "mode": "review_pr"
+  "mode": "no_pr"
 }

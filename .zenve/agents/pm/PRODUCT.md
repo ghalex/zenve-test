@@ -1,29 +1,27 @@
-# Product: Zenve
+# Product: {project_name}
 
 ## Vision
 
-Zenve lets people share a booking link tied to their availability so meetings can be scheduled without back-and-forth messaging.
+<!-- One sentence: what is this product and why does it exist? -->
+_Not yet defined._
 
 ## North Star Metric
 
-Weekly completed bookings through Zenve scheduling links.
+<!-- The single number that best captures whether the product is succeeding. -->
+_Not yet defined._
 
 ## Target Users
 
+<!-- Define the personas who use this product. -->
+
 | Persona | Description | Primary need |
 |---|---|---|
-| Host | A professional sharing a booking link so others can reserve time. | Publish availability and receive confirmed meetings with low setup effort. |
-| Guest | A person booking time with a host through a shared link. | Pick a valid time quickly and submit contact details without confusion. |
+| _TBD_ | _TBD_ | _TBD_ |
 
 ## Key Metrics / KPIs
 
-- Booking completion rate from public booking page visit to confirmed meeting.
-- Median time for a guest to complete a booking.
-- Weekly active hosts with at least one published scheduling link.
-
-## Product Decisions
-
-- Zenve's visual direction is a warm editorial SaaS aesthetic inspired by `https://mailhog.site`; see `docs/product/design-system.md` and `.zenve/agents/react-dev/DESIGN.md`.
+<!-- Measurable goals the team tracks. -->
+- _Not yet defined._
 
 ## Implemented Features
 
@@ -32,22 +30,17 @@ Weekly completed bookings through Zenve scheduling links.
 
 ## Current Priorities
 
-- [MUST] Public booking page where a guest selects a date, chooses a time, enters contact information, and creates a meeting.
-- [MUST] Host availability rules per event so hosts control which times guests can book.
-- [SHOULD] Guest timezone selection on the public booking page so guests can view slots in their own timezone before booking.
-- [SHOULD] Booking confirmation state that clearly confirms the reserved slot and submitted contact details.
-- [SHOULD] Host events overview page that lists existing event types, connected calendars, and public booking links using mock data.
-- [SHOULD] Host event details flow where a host selects an event and edits its title, duration, and connected calendar.
-- [SHOULD] Host-facing flow to publish a shareable scheduling link backed by availability.
-- [COULD] Guest reschedule and cancellation flow from a confirmation link.
+<!-- MoSCoW-labelled backlog. Keep this list short and ordered. -->
+- _Not yet defined._
 
 ## Future / Deferred
 
 <!-- Ideas acknowledged but not committed. -->
-- Team scheduling, pooled availability, and round-robin assignment.
-- Payments and paid appointment types.
+- _Nothing deferred yet._
 
 ## Open Questions
 
-- [ ] What booking confirmation information must be shown immediately after a meeting is created?
-- [ ] Should hosts manage one default availability template for all event types, or configure availability separately for each event in the first release?
+<!-- Unresolved product decisions. Remove when answered, add new ones as they arise. -->
+- [ ] _What is the core problem this product solves?_
+- [ ] _Who is the primary persona?_
+- [ ] _What does success look like at 3 months?_
