@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import HostEventCard from '@/components/host-events/host-event-card'
 import { mockHostEventsPageContext } from '@/lib/mock-host-events'
@@ -21,15 +22,20 @@ export default function HostEventsOverview() {
             <span className="editorial-kicker">host</span>
             <span className="editorial-eyebrow">curated schedule hub | {hostDisplayName}</span>
           </div>
-          <Button
-            variant="outline"
-            className="rounded-lg bg-background/70"
-            onClick={() => {
-              void dispatch(signOut())
-            }}
-          >
-            Sign out
-          </Button>
+          <div className="flex flex-wrap items-center gap-2">
+            <Button asChild variant="ghost" className="rounded-md bg-background/30">
+              <Link to="/settings">Settings</Link>
+            </Button>
+            <Button
+              variant="outline"
+              className="rounded-lg bg-background/70"
+              onClick={() => {
+                void dispatch(signOut())
+              }}
+            >
+              Sign out
+            </Button>
+          </div>
         </div>
         <div className="max-w-3xl space-y-3">
           <h1 className="font-editorial text-3xl leading-tight text-foreground sm:text-5xl">

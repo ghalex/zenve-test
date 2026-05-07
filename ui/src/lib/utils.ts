@@ -101,9 +101,39 @@ export function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
+export function isValidDisplayName(name: string) {
+  const trimmedName = name.trim()
+
+  return trimmedName.length >= 1 && trimmedName.length <= 80
+}
+
+export function getDisplayInitials(name: string) {
+  const initials = name
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? '')
+    .join('')
+
+  return initials || 'ZN'
+}
+
 export function getErrorMessage(error: unknown, fallbackMessage = 'Something went wrong.') {
   if (error instanceof Error && error.message) {
     return error.message
+  }
+
+  if (
+    typeof error === 'object' &&
+    error !== null &&
+    'data' in error &&
+    typeof error.data === 'object' &&
+    error.data !== null &&
+    'message' in error.data &&
+    typeof error.data.message === 'string'
+  ) {
+    return error.data.message
   }
 
   if (typeof error === 'object' && error !== null && 'message' in error && typeof error.message === 'string') {

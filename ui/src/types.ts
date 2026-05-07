@@ -71,4 +71,13 @@ export interface HostEventsPageContext {
   events: HostEvent[]
 }
 
+export interface SettingsProfile {
+  name: string
+  avatarUrl: string | null
+}
+
+export interface UpdateSettingsProfileResponse extends SettingsProfile {
+  updatedAt: string
+}
+
 export type AuthMode = 'sign-in' | 'sign-up'
