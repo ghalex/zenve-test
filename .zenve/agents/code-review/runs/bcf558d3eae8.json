@@ -1,0 +1,25 @@
+{
+  "run_id": "bcf558d3eae8",
+  "agent": "code-review",
+  "started_at": "2026-05-08T10:12:25Z",
+  "finished_at": "2026-05-08T10:13:43Z",
+  "duration_seconds": 77.72382433398161,
+  "status": "completed",
+  "exit_code": 0,
+  "item": {
+    "type": "pull_request",
+    "number": 41,
+    "title": "The host app needs to be more like a dashboard"
+  },
+  "output": "✅ Approved\n\nChecked React rules against the full diff and issue #39. The private host routes now share a dashboard/sidebar shell, public booking remains outside it, imports use `@/`, protected routing is preserved, and no blockers were found.\n\nRUN_OK: approved PR #41 — dashboard shell matches issue #39 and React architecture rules",
+  "pipeline_transition": {
+    "from_label": "zenve:code-review",
+    "to_label": null
+  },
+  "token_usage": {
+    "input_tokens": 44282,
+    "output_tokens": 1060,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
