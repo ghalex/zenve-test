@@ -1,0 +1,27 @@
+{
+  "run_id": "d081491ae053",
+  "agent": "frontend-dev",
+  "started_at": "2026-05-08T09:24:31Z",
+  "finished_at": "2026-05-08T09:30:31Z",
+  "duration_seconds": 360.9163027080358,
+  "status": "completed",
+  "exit_code": 0,
+  "item": {
+    "type": "issue",
+    "number": 39,
+    "title": "The host app needs to be more like a dashboard"
+  },
+  "output": "Implemented dashboard layout for authenticated host pages.\n\n- Added `DashboardLayout` and `AppSidebar`.\n- Nested `/` and `/settings` under the private dashboard shell.\n- Kept `/auth` and public booking routes outside the sidebar layout.\n- Removed duplicate Settings, Back, and Sign out controls from page chrome.\n- Added sidebar/sheet/tooltip/skeleton primitives and mobile sidebar support.\n- Verified with `pnpm lint` and `pnpm build`.\n\nRUN_OK: Dashboard sidebar layout implemented for host app; auth and public booking layouts preserved.",
+  "pipeline_transition": {
+    "from_label": "zenve:frontend-dev",
+    "to_label": [
+      "zenve:code-review"
+    ]
+  },
+  "token_usage": {
+    "input_tokens": 167458,
+    "output_tokens": 11150,
+    "cost_usd": 0.0
+  },
+  "error": null
+}
