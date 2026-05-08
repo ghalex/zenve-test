@@ -1,0 +1,18 @@
+{
+  "run_id": "8fbeb191f37e",
+  "agent": "code-review",
+  "started_at": "2026-05-08T10:04:56Z",
+  "finished_at": "2026-05-08T10:04:56Z",
+  "duration_seconds": 0.0,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 39,
+    "title": "The host app needs to be more like a dashboard"
+  },
+  "output": null,
+  "pipeline_transition": null,
+  "token_usage": null,
+  "error": "git worktree add --detach worktrees/code-review-8fbeb1 origin/ failed: fatal: invalid reference: origin/"
+}
