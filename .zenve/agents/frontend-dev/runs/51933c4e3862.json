@@ -1,0 +1,22 @@
+{
+  "run_id": "51933c4e3862",
+  "agent": "frontend-dev",
+  "started_at": "2026-05-08T09:15:23Z",
+  "finished_at": "2026-05-08T09:18:27Z",
+  "duration_seconds": 184.2166183750378,
+  "status": "failed",
+  "exit_code": 1,
+  "item": {
+    "type": "issue",
+    "number": 39,
+    "title": "The host app needs to be more like a dashboard"
+  },
+  "output": null,
+  "pipeline_transition": null,
+  "token_usage": {
+    "input_tokens": 24,
+    "output_tokens": 6783,
+    "cost_usd": 0.8126982500000001
+  },
+  "error": "claude result error: subtype=error_max_turns | details: {\"subtype\": \"error_max_turns\", \"is_error\": true, \"result\": null}"
+}
